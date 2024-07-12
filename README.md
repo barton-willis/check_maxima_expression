@@ -7,6 +7,9 @@
 (%i2) check_expression(a+b,true);
 (%o2) done
 
+```
+Construct several Maxima expression with a missing `simp` flag and check it
+```
 (%i3) :lisp(msetq \$xxx '((%sin simp) ((%sin) 7))))$
 
 (%i3) check_expression(xxx,true);
