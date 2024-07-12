@@ -1,5 +1,5 @@
 # check_maxima_expression
- Check a Maxima expression for missing simp flags and other defects. Some examples
+ Check a Maxima expression for missing simp flags and other defects. Assuming the file `check-expression-p.lisp` is in a folder that Maxima can find, here are some examples
 
  ```
 (%i1) load("check-expression-p.lisp")$
