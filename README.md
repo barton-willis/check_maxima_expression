@@ -8,13 +8,16 @@
 (%o2) done
 
 ```
-Construct several Maxima expression with a missing `simp` flag and check it
+Construct Maxima expression with a missing `simp` flag and check it
 ```
 (%i3) :lisp(msetq \$xxx '((%sin simp) ((%sin) 7))))$
 
 (%i3) check_expression(xxx,true);
 Bad expression: expr = sin(7) ; reason = missing-simp-flag
 (%o3)  false
+```
+And a test with a Common Lisp rational number
+```
 
 (%i4) :lisp(msetq \$xxx (/ 5 7))
 
