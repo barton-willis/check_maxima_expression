@@ -35,6 +35,6 @@
 		(proper-expression-p x flag)
 		(cond ((not bool)
 		         (let ((*standard-output* *debug-io*)) 
-		            (mtell "simplifya: expr = ~M ; reason = ~M ~%" e reason)))
+		            (mtell "Bad expression: expr = ~M ; reason = ~M ~%" e reason)))
           (t '$done)))) 
 
