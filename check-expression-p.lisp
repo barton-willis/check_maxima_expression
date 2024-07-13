@@ -30,9 +30,9 @@
              (throw 'oops (values t e (caar e)))))         
         (t (values nil e (type-of e)))))
 
-(defmfun $check_expression (x flag)
+(defmfun $check_expression (x)
   (multiple-value-bind (bool e reason) 
-		(proper-expression-p x flag)
+		(proper-expression-p x t)
 		(cond ((not bool)
 		         (let ((*standard-output* *debug-io*)) 
 		            (mtell "Bad expression: expr = ~M ; reason = ~M ~%" e reason)))
