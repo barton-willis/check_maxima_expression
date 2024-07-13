@@ -1,4 +1,4 @@
-# check_maxima_expression
+# check maxima_ xpression
 
  The function `check_expression` checks a Maxima expression for missing `simp` flags and a few other defects. This function is mostly useful for developers, not users.
  
