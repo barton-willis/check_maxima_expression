@@ -2,7 +2,7 @@
 
  The function `check_expression` checks a Maxima expression for missing `simp` flags and a few other defects. This function might be useful for developers but is unlikely to be useful to users.
 
- To use this function, put the file `check-expression-p.lisp` in a directory that Maxima can access. Here are some examples:
+ To use this function, put the file `check-expression-p.lisp` in a directory that Maxima can access. After that, load the file using the command
 
  ```
 (%i1) load("check-expression-p.lisp")$
