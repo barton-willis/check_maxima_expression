@@ -1,7 +1,7 @@
 # Check maxima expression
 
- The function `check_expression` checks a Maxima expression for missing `simp` flags and a few other defects. This function is mostly useful for developers, not users.
- 
+ The function `check_expression` checks a Maxima expression for missing `simp` flags and a few other defects. This function might be useful for developers, but it's unlikely to be useful to users.
+
  To use this function, put the file `check-expression-p.lisp` in a folder that Maxima can find. Here are some examples
 
  ```
@@ -19,7 +19,7 @@ Here is an example of an expression with a missing `simp` flag:
 Bad expression: expr = sin(7) ; reason = missing-simp-flag
 (%o3)  false
 ```
-And a test that shows that `check_expression` detects a rational number as a bogus expression:
+And a test that shows that `check_expression` flags a Common Lips rational number as bogus
 ```
 (%i4) :lisp(msetq \$xxx (/ 5 7))
 
