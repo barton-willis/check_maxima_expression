@@ -34,7 +34,9 @@
 
     ((stringp e) (values t e 'string))
 
-    (($ratnump e) (values t e 'number))  ; not mnump, numberp, or ratnump!
+    ((integerp e) (values t e 'integer))
+
+    (($ratnump e) (values t e 'non-integer-number))  ; not mnump, numberp, or ratnump!
 
     ((floatp e) (values t e (type-of e)))
 
